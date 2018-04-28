@@ -38,11 +38,17 @@ namespace WindowsFormsApp1
     }
     public class Objava
     {
-        public string _id { get; set; }
+        public ObjectId _id { get; set; }
         public string Strana { get; set; }
         public string Cioda { get; set; }
         public string Naslov { get; set; }
         public string Text { get; set; }
         public DateTime Datum { get; set; }
+
+        public ObjectId getID(Objava o)
+        {
+            return o._id;
+        }
+
     }
 }

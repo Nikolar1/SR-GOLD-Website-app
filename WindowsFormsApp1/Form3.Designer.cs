@@ -34,9 +34,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.Naslov = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Zakaceno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +42,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Naslov = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Zakaceno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -62,13 +64,15 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Naslov,
             this.Zakaceno,
-            this.Datum});
+            this.Datum,
+            this.ID});
             this.listView1.Location = new System.Drawing.Point(12, 120);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(338, 253);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // radioButton1
             // 
@@ -81,6 +85,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Knjigovodstvena agencija";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -91,6 +96,7 @@
             this.radioButton2.TabIndex = 3;
             this.radioButton2.Text = "Poljoprivredna apoteka";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -101,6 +107,7 @@
             this.radioButton3.TabIndex = 4;
             this.radioButton3.Text = "Posta";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -111,21 +118,7 @@
             this.radioButton4.TabIndex = 5;
             this.radioButton4.Text = "Cenovnik";
             this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // Naslov
-            // 
-            this.Naslov.Text = "Naslov";
-            this.Naslov.Width = 113;
-            // 
-            // Zakaceno
-            // 
-            this.Zakaceno.Text = "Zakaceno";
-            this.Zakaceno.Width = 110;
-            // 
-            // Datum
-            // 
-            this.Datum.Text = "Datum";
-            this.Datum.Width = 108;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -179,27 +172,60 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(648, 379);
+            this.button2.Location = new System.Drawing.Point(505, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 59);
             this.button2.TabIndex = 15;
             this.button2.Text = "Izmeni";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Izmeni_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(483, 379);
+            this.button3.Location = new System.Drawing.Point(359, 379);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 59);
             this.button3.TabIndex = 16;
             this.button3.Text = "Obrisi";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Obrisi_Click);
+            // 
+            // Naslov
+            // 
+            this.Naslov.Text = "Naslov";
+            this.Naslov.Width = 73;
+            // 
+            // Zakaceno
+            // 
+            this.Zakaceno.Text = "Zakaceno";
+            this.Zakaceno.Width = 85;
+            // 
+            // Datum
+            // 
+            this.Datum.Text = "Datum";
+            this.Datum.Width = 102;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 105;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(651, 379);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(140, 59);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Dodaj";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Dodaj_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.checkBox1);
@@ -229,9 +255,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.ColumnHeader Naslov;
-        private System.Windows.Forms.ColumnHeader Zakaceno;
-        private System.Windows.Forms.ColumnHeader Datum;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -240,5 +263,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ColumnHeader Naslov;
+        private System.Windows.Forms.ColumnHeader Zakaceno;
+        private System.Windows.Forms.ColumnHeader Datum;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.Button button4;
     }
 }
