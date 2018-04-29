@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MongoDB.Bson;
-using MongoDB.Driver;
 
 namespace WindowsFormsApp1
 {
@@ -17,38 +15,11 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            
-        }
-        private void Nova_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 form = new Form2();
-            form.ShowDialog();
-            this.Show();
-            
         }
 
-        private void Izmeni_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form3 form = new Form3();
-            form.ShowDialog();
-            this.Show();
+            DialogResult = DialogResult.OK;
         }
-    }
-    public class Objava
-    {
-        public ObjectId _id { get; set; }
-        public string Strana { get; set; }
-        public string Cioda { get; set; }
-        public string Naslov { get; set; }
-        public string Text { get; set; }
-        public DateTime Datum { get; set; }
-
-        public ObjectId getID(Objava o)
-        {
-            return o._id;
-        }
-
     }
 }

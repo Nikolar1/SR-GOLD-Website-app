@@ -12,8 +12,6 @@ C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MongoDB
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MongoDB.Driver.xml
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
-C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -21,3 +19,8 @@ C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Windows
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+C:\Users\Nikola\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
